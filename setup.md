@@ -29,7 +29,7 @@
 1. **Clone the repository**
 
    ```bash
-   git clone [https://github.com/libo-huang/scholar-ref-cleaner.git](https://github.com/libo-huang/scholar-ref-cleaner.git)
+   git clone https://github.com/libo-huang/scholar-ref-cleaner.git
    cd scholar-ref-cleaner
    ```
 2. **Install dependencies**
@@ -82,7 +82,7 @@ Google Scholar has strict rate limits. If deployed on the cloud, the IP might be
 1. **克隆仓库**
 
    ```bash
-   git clone [https://github.com/libo-huang/scholar-ref-cleaner.git](https://github.com/libo-huang/scholar-ref-cleaner.git)
+   git clone https://github.com/libo-huang/scholar-ref-cleaner.git
    cd scholar-ref-cleaner
    ```
 2. **安装依赖**

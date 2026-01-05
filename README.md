@@ -8,7 +8,7 @@
 >
 > **拒绝引用“幻觉”文献。** 使用真实学术数据库校验并自动修正 AI 生成的参考文献。
 
-[🇺🇸 English Manual](#-English_Manual) | [🇨🇳 中文说明](#-中文说明)
+[🇺🇸 English Manual](#-english-manual) | [🇨🇳 中文说明](#-中文说明)
 
 ---
 
@@ -114,13 +114,6 @@ The tool will process references one by one.
 
 ---
 
-### ⚠️ Disclaimer / 免责声明
-
-* **Accuracy**: While this tool queries official databases, it is an automated assistant. **Always perform a final manual check** for critical publications (e.g., NSFC grants, Thesis).
-* **Rate Limits**: Searching specifically via Google Scholar may trigger CAPTCHAs or temporary IP bans. This tool is designed to failover gracefully, but speeds may vary.
-
----
-
 ### 🛠️ Local Installation (Optional / 可选本地运行)
 
 If you prefer running this locally to avoid network limits:
@@ -128,7 +121,7 @@ If you prefer running this locally to avoid network limits:
 
 ```bash
 # 1. Clone repo
-git clone [https://github.com/](https://github.com/)libo-huang/scholar-ref-cleaner.git
+git clone https://github.com/libo-huang/scholar-ref-cleaner.git
 
 # 2. Install requirements
 pip install -r requirements.txt
@@ -136,3 +129,13 @@ pip install -r requirements.txt
 # 3. Run App
 streamlit run app.py
 ```
+
+
+---
+
+### ⚠️ Disclaimer / 免责声明
+
+* **Accuracy**: While this tool queries official databases, it is an automated assistant. **Always perform a final manual check** for critical publications (e.g., NSFC grants, Thesis).
+* **Rate Limits**: Searching specifically via Google Scholar may trigger CAPTCHAs or temporary IP bans. This tool is designed to failover gracefully, but speeds may vary.
+* **License**: This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+

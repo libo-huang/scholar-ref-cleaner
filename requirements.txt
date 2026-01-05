@@ -1,6 +1,7 @@
 streamlit
 bibtexparser
+scholarly
 requests
 thefuzz
 python-docx
-scholarly
+pandas

@@ -9,7 +9,6 @@
 
 ---
 
-<div id="english"></div>
 
 ## 📖 English
 

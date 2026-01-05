@@ -1,0 +1,5 @@
+streamlit
+bibtexparser
+requests
+thefuzz
+python-docx

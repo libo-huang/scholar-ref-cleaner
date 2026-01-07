@@ -12,8 +12,12 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+      
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        # 下面这行已修正为您提供的具体地址
-        run: git push https://libo-ict:$HF_TOKEN@huggingface.co/spaces/libo-ict/scholar-ref-cleaner main
+        # ⚠️ 核心修改点：
+        # 1. 使用 libo-ict (HF账号)
+        # 2. 加上 --force 参数，解决"历史不一致"报错
+        # 3. 明确指定推送到 main 分支
+        run: git push --force https://libo-ict:$HF_TOKEN@huggingface.co/spaces/libo-ict/scholar-ref-cleaner main

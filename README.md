@@ -12,7 +12,8 @@ license: mit
 
 # 🎓 Scholar Ref Cleaner
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://scholar-rc.streamlit.app/)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
@@ -47,8 +48,12 @@ Generative AI (ChatGPT, Claude, DeepSeek) is great for writing, but terrible at 
 
 ### 🚀 Quick Start Guide
 
-**Step 1: Access the App**
-Click the "Open in Streamlit" badge at the top or visit: [https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
+**Step 1: Access the App (Choose a Server)**
+
+* **Server 1 (Streamlit Cloud)**: [https://scholar-rc.streamlit.app/](https://scholar-rc.streamlit.app/)
+* **Server 2 (Hugging Face)**: [https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
+
+*(Note: If one server is sleeping or slow, please try the other.)*
 
 **Step 2: Upload Your File**
 
@@ -69,8 +74,8 @@ The tool will process references one by one.
 
 | Status              | Icon | Meaning                                                              | Action                                             |
 | :------------------ | :--: | :------------------------------------------------------------------- | :------------------------------------------------- |
-| **Verified**  |  ✅  | Found a match with >85% similarity. Metadata auto-corrected.         | Safe to use.                                       |
-| **Ambiguous** | ⚠️ | Found a paper with a somewhat similar title (50-85%), but not exact. | **Manual Check Required.**                   |
+| **Verified** |  ✅  | Found a match with >85% similarity. Metadata auto-corrected.         | Safe to use.                                       |
+| **Ambiguous** | ⚠️ | Found a paper with a somewhat similar title (50-85%), but not exact. | **Manual Check Required.** |
 | **Not Found** |  ❌  | No match found in any database.                                      | **Delete this citation.** It is likely fake. |
 
 ---
@@ -98,8 +103,14 @@ The tool will process references one by one.
 
 ### 🚀 使用步骤
 
-**第一步：打开工具**
-点击页面顶部的 "Open in Streamlit" 徽章，或访问：[https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
+**第一步：打开工具 (选择服务器)**
+
+为了保证访问稳定性，我们提供了两个镜像站点：
+
+* **服务器 1 (Streamlit Cloud)**: [https://scholar-rc.streamlit.app/](https://scholar-rc.streamlit.app/)
+* **服务器 2 (Hugging Face)**: [https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
+
+*(注：如果某一个站点处于休眠状态，请尝试点击另一个)*
 
 **第二步：上传文件**
 
@@ -120,8 +131,8 @@ The tool will process references one by one.
 
 | 状态                         | 图标 | 含义                                          | 建议操作                                                       |
 | :--------------------------- | :--: | :-------------------------------------------- | :------------------------------------------------------------- |
-| **Verified (已验证)**  |  ✅  | 找到匹配项（相似度 >85%），元数据已自动修正。 | **放心使用**，直接引用。                                 |
-| **Ambiguous (存疑)**   | ⚠️ | 找到了类似标题的论文，但差异较大。            | **必须人工核对**，可能是不同年份的版本或 AI 记错了标题。 |
+| **Verified (已验证)** |  ✅  | 找到匹配项（相似度 >85%），元数据已自动修正。 | **放心使用**，直接引用。                                 |
+| **Ambiguous (存疑)** | ⚠️ | 找到了类似标题的论文，但差异较大。            | **必须人工核对**，可能是不同年份的版本或 AI 记错了标题。 |
 | **Not Found (未找到)** |  ❌  | 三大数据库均未检索到。                        | **直接删除**，极大概率为 AI 幻觉。                       |
 
 ---
@@ -133,7 +144,7 @@ If you prefer running this locally to avoid network limits:
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/libo-huang/scholar-ref-cleaner.git
+git clone [https://github.com/libo-huang/scholar-ref-cleaner.git](https://github.com/libo-huang/scholar-ref-cleaner.git)
 
 # 2. Install requirements
 pip install -r requirements.txt
@@ -143,6 +154,7 @@ streamlit run app.py
 ```
 
 
+
 ---
 
 ### ⚠️ Disclaimer / 免责声明
@@ -150,4 +162,3 @@ streamlit run app.py
 * **Accuracy**: While this tool queries official databases, it is an automated assistant. **Always perform a final manual check** for critical publications (e.g., NSFC grants, Thesis).
 * **Rate Limits**: Searching specifically via Google Scholar may trigger CAPTCHAs or temporary IP bans. This tool is designed to failover gracefully, but speeds may vary.
 * **License**: This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-

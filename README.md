@@ -1,3 +1,15 @@
+---
+title: Scholar Ref Cleaner
+emoji: 🎓
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.39.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # 🎓 Scholar Ref Cleaner
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://scholar-rc.streamlit.app/)

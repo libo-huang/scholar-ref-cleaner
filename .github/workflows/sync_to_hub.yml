@@ -19,4 +19,4 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         # ↓↓↓ 下面这一行需要修改！ ↓↓↓
         # 格式为: huggingface.co/spaces/您的HF用户名/您的Space名字
-        run: git push https://libohuang:$HF_TOKEN@huggingface.co/spaces/libo-ict/scholar-ref-cleaner main
+        run: git push https://libo-ict:$HF_TOKEN@huggingface.co/spaces/libo-ict/scholar-ref-cleaner main

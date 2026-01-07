@@ -12,7 +12,7 @@ license: mit
 
 # 🎓 Scholar Ref Cleaner
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://scholar-rc.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
@@ -48,7 +48,7 @@ Generative AI (ChatGPT, Claude, DeepSeek) is great for writing, but terrible at 
 ### 🚀 Quick Start Guide
 
 **Step 1: Access the App**
-Click the "Open in Streamlit" badge at the top or visit: [https://scholar-rc.streamlit.app/](https://scholar-rc.streamlit.app/)
+Click the "Open in Streamlit" badge at the top or visit: [https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
 
 **Step 2: Upload Your File**
 
@@ -99,7 +99,7 @@ The tool will process references one by one.
 ### 🚀 使用步骤
 
 **第一步：打开工具**
-点击页面顶部的 "Open in Streamlit" 徽章，或访问：[https://scholar-rc.streamlit.app/](https://scholar-rc.streamlit.app/)
+点击页面顶部的 "Open in Streamlit" 徽章，或访问：[https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner](https://huggingface.co/spaces/libo-ict/scholar-ref-cleaner)
 
 **第二步：上传文件**
 

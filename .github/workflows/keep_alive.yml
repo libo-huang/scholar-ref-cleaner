@@ -1,0 +1,25 @@
+name: Keep Alive via Empty Commit
+
+on:
+  schedule:
+    # 建议设置为北京时间早上8点左右（UTC时间0点）
+    # 这样每天大家开始用的时候它刚被唤醒
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许你手动点击测试
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    permissions:                # 关键：赋予写权限，否则无法提交
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main             # 确保拉取的是 main 分支
+
+      - name: Auto Commit
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git commit --allow-empty -m "Auto-wakeup: keep streamlit alive"
+          git push

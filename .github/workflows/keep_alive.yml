@@ -1,25 +1,17 @@
-name: Keep Alive via Empty Commit
+name: Keep Streamlit App Alive
 
 on:
   schedule:
-    # 建议设置为北京时间早上8点左右（UTC时间0点）
-    # 这样每天大家开始用的时候它刚被唤醒
-    - cron: '0 0 * * *'
-  workflow_dispatch: # 允许你手动点击测试
+    # 每 2 小时运行一次 (UTC 时间)
+    - cron: "0 */2 * * *"
+  workflow_dispatch: # 允许手动触发
 
 jobs:
-  commit:
+  ping_app:
     runs-on: ubuntu-latest
-    permissions:                # 关键：赋予写权限，否则无法提交
-      contents: write
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: main             # 确保拉取的是 main 分支
-
-      - name: Auto Commit
+      - name: Ping Streamlit App
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git commit --allow-empty -m "Auto-wakeup: keep streamlit alive"
-          git push
+          # 使用 curl 发送请求，-I 表示只请求头部，减少流量消耗
+          # -L 表示跟随重定向
+          curl -I -L https://scholar-rc.streamlit.app/

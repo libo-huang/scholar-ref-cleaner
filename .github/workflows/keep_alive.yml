@@ -2,7 +2,7 @@ name: Keep Streamlit App Alive
 
 on:
   schedule:
-    # 每 2 小时运行一次 (UTC 时间)
+    # 每 2 小时运行一次
     - cron: "0 */2 * * *"
   workflow_dispatch: # 允许手动触发
 
@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Ping Streamlit App
         run: |
-          # 使用 curl 发送请求，-I 表示只请求头部，减少流量消耗
-          # -L 表示跟随重定向
-          curl -I -L https://scholar-rc.streamlit.app/
+          # -s : 静默模式，不输出进度条
+          # -o /dev/null : 把下载的内容丢弃（我们不需要网页内容）
+          # -w "%{http_code}" : 只有输出 HTTP 状态码，方便在日志里确认
+          # -A "..." : 伪装成浏览器
+          
+          curl -s -o /dev/null -w "Response Code: %{http_code}\n" \
+          -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" \
+          https://scholar-rc.streamlit.app/
